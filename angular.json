@@ -42,7 +42,8 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "serviceWorker": "projects/angular-learning/ngsw-config.json"
             },
             "development": {
               "optimization": false,
