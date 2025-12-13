@@ -7,9 +7,9 @@
     "types": []
   },
   "include": [
-    "src/**/*.ts"
+    "projects/angular-learning/src/**/*.ts"
   ],
   "exclude": [
-    "src/**/*.spec.ts"
+    "projects/angular-learning/src/**/*.spec.ts"
   ]
 }

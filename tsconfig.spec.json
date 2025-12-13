@@ -9,7 +9,7 @@
     ]
   },
   "include": [
-    "src/**/*.d.ts",
-    "src/**/*.spec.ts"
+    "projects/angular-learning/src/**/*.d.ts",
+    "projects/angular-learning/src/**/*.spec.ts"
   ]
 }
