@@ -1,30 +1,161 @@
-# AngularLearning
+# Angular Learning Project
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
+A modern Angular application demonstrating best practices and industry standards for Angular development.
 
-## Development server
+## 🚀 Features
 
-To start a local development server, run:
+- **Component Architecture**: Well-organized component structure with shared and feature components
+- **Routing**: Nested routing with lazy loading support
+- **Forms**: Template-driven, reactive, and signal-based forms
+- **UI Components**: Responsive sidebar navigation and header
+- **Styling**: Tailwind CSS for modern, utility-first styling
+- **Code Quality**: ESLint configuration with Angular-specific rules
+- **Testing**: Unit tests with Vitest and Playwright for E2E testing
 
-```bash
-ng serve
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── core/                    # Core services, guards, interceptors
+│   ├── shared/
+│   │   ├── components/          # Shared/reusable components
+│   │   │   ├── header/
+│   │   │   ├── sidenav/
+│   │   │   ├── footer/
+│   │   │   └── not-found/
+│   │   └── index.ts            # Shared exports
+│   ├── features/                # Feature modules
+│   │   ├── dashboard/
+│   │   ├── forms/
+│   │   └── index.ts            # Feature exports
+│   ├── app.config.ts           # Application configuration
+│   ├── app.routes.ts           # Route definitions
+│   ├── app.html               # Main app template
+│   └── app.ts                 # Root component
+├── styles.css                 # Global styles
+└── main.ts                    # Application bootstrap
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🛠️ Development
 
-## Code scaffolding
+### Prerequisites
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development Server
+
+Start the development server:
 
 ```bash
-ng generate component component-name
+npm start
 ```
+
+Navigate to `http://localhost:4200/`. The app will automatically reload on file changes.
+
+### Building
+
+Build the project for production:
+
+```bash
+npm run build
+```
+
+### Code Quality
+
+Run linting:
+
+```bash
+npm run lint
+```
+
+Auto-fix linting issues:
+
+```bash
+npm run lint:fix
+```
+
+Format code:
+
+```bash
+npm run format
+```
+
+### Testing
+
+Run unit tests:
+
+```bash
+npm test
+```
+
+Run E2E tests:
+
+```bash
+npm run e2e
+```
+
+## 🏗️ Architecture Decisions
+
+### Component Organization
+
+- **Shared Components**: Reusable UI components (header, sidenav, footer)
+- **Feature Components**: Business logic specific components organized by feature
+- **Index Files**: Barrel exports for cleaner imports
+
+### State Management
+
+- Component-level state management using Angular signals
+- Local storage for sidebar state persistence
+
+### Styling
+
+- Tailwind CSS for utility-first styling
+- Component-scoped styles for isolation
+
+### Code Quality
+
+- ESLint with Angular-specific rules
+- Prettier for consistent code formatting
+- TypeScript strict mode enabled
+
+## 📋 Available Scripts
+
+- `npm start` - Start development server
+- `npm run build` - Build for production
+- `npm test` - Run unit tests
+- `npm run e2e` - Run E2E tests
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Auto-fix linting issues
+- `npm run format` - Format code with Prettier
+
+## 🤝 Contributing
+
+1. Follow the established project structure
+2. Run `npm run lint` and `npm run format` before committing
+3. Write tests for new features
+4. Update documentation as needed
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+````
 
 For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
 ```bash
 ng generate --help
-```
+````
 
 ## Building
 

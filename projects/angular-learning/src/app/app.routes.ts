@@ -1,9 +1,6 @@
 import { Routes } from '@angular/router';
-import { Dashboard } from '../components/dashboard/dashboard';
-import { NotFound } from '../components/not-found/not-found';
-import { SignalForm } from '../components/signal-form/signal-form';
-import { TemplateForm } from '../components/template-form/template-form';
-import { ReactiveForm } from '../components/reactive-form/reactive-form';
+import { Dashboard, SignalForm, TemplateForm, ReactiveForm } from './features';
+import { NotFound } from './shared/components';
 
 export const routes: Routes = [
   {

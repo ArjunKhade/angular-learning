@@ -24,9 +24,7 @@
                 "input": "projects/angular-learning/public"
               }
             ],
-            "styles": [
-              "projects/angular-learning/src/styles.css"
-            ]
+            "styles": ["projects/angular-learning/src/styles.css"]
           },
           "configurations": {
             "production": {
@@ -77,6 +75,15 @@
             "production": {
               "devServerTarget": "angular-learning:serve:production"
             }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/angular-learning/**/*.ts",
+              "projects/angular-learning/**/*.html"
+            ]
           }
         }
       }

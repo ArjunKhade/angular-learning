@@ -1,14 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgClass } from '@angular/common';
-import { Header } from '../components/header/header';
-import { Sidenav } from '../components/sidenav/sidenav';
+import { Header, Sidenav } from './shared/components';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, NgClass, Header, Sidenav],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App implements OnInit, OnDestroy {
   isOpen = false;
