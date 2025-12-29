@@ -1,0 +1,28 @@
+<!-- Sidebar -->
+<div class="fixed inset-y-0 left-0 z-50 bg-gray-800 text-white transition-transform duration-300 ease-in-out"
+    [ngClass]="{'translate-x-0': isOpen, '-translate-x-full': !isOpen, 'w-full': isMobile, 'w-64': !isMobile}">
+    <div class="flex items-center justify-between p-4 border-b border-gray-700">
+        <h2 class="text-xl font-bold">Navigation</h2>
+        <button (click)="onToggleSidebar()" class="text-white hover:text-gray-300 lg:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                </path>
+            </svg>
+        </button>
+    </div>
+    <nav class="mt-8">
+        <a routerLink="/dashboard" routerLinkActive="bg-gray-700"
+            class="block px-4 py-3 hover:bg-gray-700 transition-colors">Dashboard</a>
+        <a routerLink="/dashboard/template-form" routerLinkActive="bg-gray-700"
+            class="block px-4 py-3 hover:bg-gray-700 transition-colors">Template Form</a>
+        <a routerLink="/dashboard/reactive-form" routerLinkActive="bg-gray-700"
+            class="block px-4 py-3 hover:bg-gray-700 transition-colors">Reactive Form</a>
+        <a routerLink="/dashboard/signal-form" routerLinkActive="bg-gray-700"
+            class="block px-4 py-3 hover:bg-gray-700 transition-colors">Signal Form</a>
+    </nav>
+</div>
+
+<!-- Overlay for mobile -->
+@if (isOpen && isMobile) {
+<div (click)="onToggleSidebar()" class="fixed inset-0 z-40 bg-black bg-opacity-50 lg:hidden"></div>
+}
