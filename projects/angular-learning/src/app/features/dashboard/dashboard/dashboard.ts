@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs';
+import { RouterOutlet, Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,14 +8,10 @@ import { filter } from 'rxjs';
   styleUrl: './dashboard.css',
 })
 export class Dashboard implements OnInit {
-  hasChildRoute = false;
 
   constructor(private router: Router) {}
 
   ngOnInit() {
-    // Check if child route is active
-    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
-      this.hasChildRoute = this.router.url !== '/dashboard';
-    });
+    
   }
 }

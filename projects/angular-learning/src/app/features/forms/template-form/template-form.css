@@ -1,0 +1,21 @@
+.time-range-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+input {
+  width: 90px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.dash {
+  font-weight: bold;
+  margin: 0 4px;
+}
