@@ -24,7 +24,10 @@
                 "input": "projects/angular-learning/public"
               }
             ],
-            "styles": ["projects/angular-learning/src/styles.css"]
+            "styles": [
+              "projects/angular-learning/src/material-theme.scss",
+              "projects/angular-learning/src/styles.css"
+            ]
           },
           "configurations": {
             "production": {
