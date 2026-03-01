@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Dashboard, SignalForm, TemplateForm, ReactiveForm } from './features';
 import { NotFound } from './shared/components';
+import { Ngrx } from './features/ngrx/ngrx';
 
 export const routes: Routes = [
   {
@@ -23,6 +24,10 @@ export const routes: Routes = [
       {
         path: 'signal-form',
         component: SignalForm,
+      },
+      {
+        path: 'ngrx',
+        component: Ngrx,
       },
     ],
   },
