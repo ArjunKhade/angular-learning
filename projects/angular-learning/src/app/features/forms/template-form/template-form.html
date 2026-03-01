@@ -1,1 +1,17 @@
 <h1 class="text-4xl px-6 mx-2 p-4 shadow">Template Form</h1>
+
+<div class="time-range-container">
+    <input matInput readonly [ngxTimepicker]="startPicker" [(ngModel)]="startTime" />
+
+    <span class="dash" *ngIf="startTime"> - </span>
+
+    <input *ngIf="startTime" matInput readonly [ngxTimepicker]="endPicker" [(ngModel)]="endTime" />
+
+    <button mat-icon-button (click)="openStartPicker()">
+        <mat-icon>schedule</mat-icon>
+    </button>
+
+    <ngx-material-timepicker #startPicker (timeSet)="handleStartTimeSet($event)"></ngx-material-timepicker>
+
+    <ngx-material-timepicker #endPicker (timeSet)="handleEndTimeSet($event)"></ngx-material-timepicker>
+</div>
