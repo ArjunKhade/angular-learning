@@ -1,17 +1,24 @@
-<h1 class="text-4xl px-6 mx-2 p-4 shadow">Template Form</h1>
+<h1 class="login-title">Login</h1>
 
-<div class="time-range-container">
-    <input matInput readonly [ngxTimepicker]="startPicker" [(ngModel)]="startTime" />
+<form #Loginform="ngForm" (ngSubmit)="onSubmit(Loginform)" class="login-form">
+    <div class="login-field">
+        <label for="email">Email</label>
+        <input id="email" name="email" #email="ngModel" required email ngModel type="email"
+            placeholder="you@example.com" />
+    </div>
 
-    <span class="dash" *ngIf="startTime"> - </span>
+    <div class="login-field">
+        <label for="password">Password</label>
+        <input id="password" name="password" #password="ngModel" required minlength="6" ngModel type="password"
+            placeholder="Enter your password" />
+    </div>
 
-    <input *ngIf="startTime" matInput readonly [ngxTimepicker]="endPicker" [(ngModel)]="endTime" />
+    @if(email.touched && email.dirty && email.invalid){
+    <p style="color: red;">Invalid email address.</p>
+    }
+    @if(password.touched && password.dirty && password.invalid){
+    <p style="color: red;">Invalid password.</p>
+    }
 
-    <button mat-icon-button (click)="openStartPicker()">
-        <mat-icon>schedule</mat-icon>
-    </button>
-
-    <ngx-material-timepicker #startPicker (timeSet)="handleStartTimeSet($event)"></ngx-material-timepicker>
-
-    <ngx-material-timepicker #endPicker (timeSet)="handleEndTimeSet($event)"></ngx-material-timepicker>
-</div>
+    <button type="submit" class="login-button">Login</button>
+</form>
