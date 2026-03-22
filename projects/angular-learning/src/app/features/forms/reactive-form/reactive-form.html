@@ -1,9 +1,56 @@
-
 <h1 class="text-4xl px-6 mx-2 p-4 shadow">Reactive Form</h1>
 
-<form>
+
+
+<h1 class="login-title p-4">Login</h1>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <div class="login-field">
+        <label for="email">Email</label>
+        <input id="email" name="email" [formControl]="loginForm.controls.email" type="email"
+            placeholder="you@example.com" />
+    </div>
+
+    <div class="login-field">
+        <label for="password">Password</label>
+        <input id="password" name="password" formControlName="password" type="password"
+            placeholder="Enter your password" />
+    </div>
+
+    @if(IsInvalidEmail){
+    <p style="color: red;">Invalid Email </p>
+    }
+
+    @if(IsPasswordInvalid){
+    <p style="color: red;">Invalid Password must contain ? </p>
+    }
+
+    <button type="submit" class="login-button">Login</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form>
     <div class="mt-12 ">
         <input class="ml-2 px-4 rounded-2xl border border-gray-300 h-13 w-1/2" type="text "> 
         <button class="m-4 p-4 px-8 text-white bg-amber-600 rounded">  Search</button>
     </div>
-</form>
+</form> -->
